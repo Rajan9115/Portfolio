@@ -66,3 +66,4 @@ export function validateContactForm(data: ContactFormData): ValidationResult {
     errors,
   };
 }
+

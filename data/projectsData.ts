@@ -259,3 +259,4 @@ export const projectsData: Project[] = [
     timeline: "Apr 2025",
   },
 ];
+

@@ -108,7 +108,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#667085]">
-          <p>© {new Date().getFullYear()} Rajan Jaiswal. All rights reserved.</p>
+          <p>© 2026 Rajan Jaiswal. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span className="font-mono text-[11px]">
               Next.js 16 • Tailwind CSS 4 • Motion

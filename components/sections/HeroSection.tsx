@@ -6,7 +6,6 @@ import {
   ArrowDown,
   Download,
   MapPin,
-  Sparkles,
   CheckCircle2,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon, LeetCodeIcon } from "@/components/ui/Icons";
