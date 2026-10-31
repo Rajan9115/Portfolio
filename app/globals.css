@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F9FC;
+  --background-secondary: #EEF2F8;
+  --card: #FFFFFF;
+  --foreground: #17243A;
+  --foreground-secondary: #667085;
+  --accent: #5577E8;
+  --accent-soft: #E7EDFF;
+  --border: #E4E8F0;
+  --success: #21865B;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-card: var(--card);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Smooth scrolling and light theme baseline */
+html {
+  scroll-behavior: smooth;
+  background-color: #F8F9FC;
+  color: #17243A;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8F9FC;
+  color: #17243A;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Accessible focus rings */
+:focus-visible {
+  outline: 2px solid #5577E8;
+  outline-offset: 2px;
+}
+
+/* Text selection with brand tint */
+::selection {
+  background-color: #E7EDFF;
+  color: #17243A;
+}
+
+/* Restrained scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E4E8F0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E1;
 }
