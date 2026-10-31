@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Terminal, Wrench, Shield, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { toolkitData } from "@/data/portfolioData";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";

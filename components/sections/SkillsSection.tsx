@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import { Layout, Server, Database, CreditCard, Sparkles } from "lucide-react";
+import { Layout, Server, Database, CreditCard } from "lucide-react";
 import { skillCategories } from "@/data/portfolioData";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Badge } from "@/components/ui/Badge";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 const ICON_MAP: Record<string, React.ElementType> = {
