@@ -16,9 +16,9 @@ export const personalInfo = {
   status: "Open to Remote & Global Relocation",
   email: "rajank5038383@gmail.com",
   phone: "+91 9115265953",
-  github: "https://github.com/Princeofnorth06",
+  github: "https://github.com/Rajan9115",
   linkedin: "https://www.linkedin.com/in/rajan-kumar-390772274/",
-  leetcode: "https://leetcode.com/u/rajank5038383/",
+  leetcode: "https://leetcode.com/u/Rajan9115/",
   resumePath: "/resume/Rajan_Jaiswal_Resume.pdf",
   profileImage: "/images/profile/rajan-jaiswal.jpg",
   education: {

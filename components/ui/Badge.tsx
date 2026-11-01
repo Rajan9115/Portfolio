@@ -16,11 +16,11 @@ export function Badge({
   ...props
 }: BadgeProps) {
   const variantStyles = {
-    default: "bg-[#FFFFFF] text-[#17243A] border-[#E4E8F0] shadow-xs",
-    accent: "bg-[#E7EDFF] text-[#5577E8] border-[#5577E8]/20 font-medium",
-    success: "bg-[#EBF7F0] text-[#21865B] border-[#21865B]/20 font-medium",
-    outline: "bg-transparent text-[#667085] border-[#E4E8F0]",
-    subtle: "bg-[#EEF2F8] text-[#17243A] border-transparent",
+    default: "bg-card text-foreground border-border shadow-xs",
+    accent: "bg-accent-soft text-accent border-accent/20 font-medium",
+    success: "bg-emerald-500/10 text-success border-success/20 font-medium",
+    outline: "bg-transparent text-foreground-secondary border-border",
+    subtle: "bg-background-secondary text-foreground border-transparent",
   };
 
   const sizeStyles = {
@@ -43,4 +43,3 @@ export function Badge({
     </span>
   );
 }
-

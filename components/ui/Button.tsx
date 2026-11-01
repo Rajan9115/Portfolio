@@ -22,15 +22,15 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const variantStyles = {
       primary:
-        "bg-[#5577E8] text-white hover:bg-[#4364D5] shadow-xs active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-[#5577E8]/40 border border-transparent",
+        "bg-accent text-white hover:opacity-90 shadow-xs active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-accent/40 border border-transparent",
       secondary:
-        "bg-white text-[#17243A] hover:bg-[#EEF2F8] border border-[#E4E8F0] shadow-xs active:scale-[0.98]",
+        "bg-card text-foreground hover:bg-background-secondary border border-border shadow-xs active:scale-[0.98]",
       outline:
-        "bg-transparent text-[#17243A] hover:bg-[#EEF2F8] border border-[#E4E8F0] active:scale-[0.98]",
+        "bg-transparent text-foreground hover:bg-background-secondary border border-border active:scale-[0.98]",
       ghost:
-        "bg-transparent text-[#17243A] hover:bg-[#EEF2F8] border border-transparent",
+        "bg-transparent text-foreground hover:bg-background-secondary border border-transparent",
       subtle:
-        "bg-[#E7EDFF] text-[#5577E8] hover:bg-[#D5E1FF] border border-transparent font-medium",
+        "bg-accent-soft text-accent hover:opacity-80 border border-transparent font-medium",
     };
 
     const sizeStyles = {
@@ -85,4 +85,3 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = "Button";
-
