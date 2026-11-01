@@ -12,11 +12,11 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8F9FC] text-[#17243A]">
-      {/* Editorial Sticky Navigation */}
+    <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
+      {/* Editorial Sticky Navigation with Dark Mode Toggle */}
       <Navbar />
 
-      {/* Main Editorial Content Stream */}
+      {/* Main Content Stream */}
       <main className="flex-1 flex flex-col">
         {/* 1. Hero Section */}
         <HeroSection />
@@ -43,7 +43,7 @@ export default function Home() {
         <ContactSection />
       </main>
 
-      {/* Editorial Footer */}
+      {/* Footer */}
       <Footer />
     </div>
   );

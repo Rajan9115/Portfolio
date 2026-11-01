@@ -15,7 +15,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-20 sm:py-28 bg-[#F8F9FC]">
+    <section id="skills" className="py-20 sm:py-28 bg-background transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           kicker="Technical Capabilities"
@@ -28,18 +28,18 @@ export function SkillsSection() {
             const Icon = ICON_MAP[category.iconName] || Server;
             return (
               <FadeIn key={category.title} direction="up" delay={index * 0.1}>
-                <div className="h-full flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#FFFFFF] border border-[#E4E8F0] shadow-xs hover:border-[#CBD5E1] transition-all">
+                <div className="h-full flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-card border border-border shadow-xs hover:border-foreground-secondary/40 transition-all">
                   <div>
                     {/* Header */}
                     <div className="flex items-center gap-3.5 mb-3">
-                      <div className="p-3 rounded-xl bg-[#E7EDFF] text-[#5577E8]">
+                      <div className="p-3 rounded-xl bg-accent-soft text-accent">
                         <Icon className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="font-sans font-bold text-lg sm:text-xl text-[#17243A]">
+                        <h3 className="font-sans font-bold text-lg sm:text-xl text-foreground">
                           {category.title}
                         </h3>
-                        <p className="text-xs sm:text-sm text-[#667085]">
+                        <p className="text-xs sm:text-sm text-foreground-secondary">
                           {category.description}
                         </p>
                       </div>
@@ -50,21 +50,21 @@ export function SkillsSection() {
                       {category.items.map((skill) => (
                         <div
                           key={skill.name}
-                          className="flex items-center justify-between p-3 rounded-xl bg-[#F8F9FC] border border-[#E4E8F0] hover:bg-[#EEF2F8] transition-colors"
+                          className="flex items-center justify-between p-3 rounded-xl bg-background border border-border hover:bg-background-secondary transition-colors"
                         >
                           <div className="flex items-center gap-2">
                             <span
                               className={`h-2 w-2 rounded-full ${
-                                skill.highlight ? "bg-[#5577E8]" : "bg-[#CBD5E1]"
+                                skill.highlight ? "bg-accent" : "bg-border"
                               }`}
                             />
-                            <span className="font-sans font-medium text-sm text-[#17243A]">
+                            <span className="font-sans font-medium text-sm text-foreground">
                               {skill.name}
                             </span>
                           </div>
 
                           {skill.notes && (
-                            <span className="font-mono text-xs text-[#667085]">
+                            <span className="font-mono text-xs text-foreground-secondary">
                               {skill.notes}
                             </span>
                           )}
@@ -73,11 +73,11 @@ export function SkillsSection() {
                     </div>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-[#E4E8F0] flex items-center justify-between text-xs text-[#667085]">
+                  <div className="mt-6 pt-4 border-t border-border flex items-center justify-between text-xs text-foreground-secondary">
                     <span className="font-mono">
                       {category.items.length} Core Competencies
                     </span>
-                    <span className="text-[#5577E8] font-medium">
+                    <span className="text-accent font-medium">
                       Production Ready
                     </span>
                   </div>

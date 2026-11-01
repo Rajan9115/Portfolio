@@ -102,15 +102,30 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${jetbrainsMono.variable} scroll-smooth antialiased`}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#F8F9FC] text-[#17243A] selection:bg-[#E7EDFF] selection:text-[#17243A] flex flex-col font-sans">
+      <body className="min-h-screen bg-background text-foreground selection:bg-accent-soft selection:text-foreground flex flex-col font-sans transition-colors duration-200">
         {children}
       </body>
     </html>

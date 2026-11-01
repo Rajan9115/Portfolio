@@ -28,17 +28,17 @@ export function SectionHeader({
     >
       {kicker && (
         <div className="inline-flex items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#5577E8]" />
-          <span className="font-mono text-xs uppercase tracking-wider font-semibold text-[#5577E8]">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <span className="font-mono text-xs uppercase tracking-wider font-semibold text-accent">
             {kicker}
           </span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#17243A]">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
         {title}
       </h2>
       {description && (
-        <p className="text-base sm:text-lg text-[#667085] leading-relaxed">
+        <p className="text-base sm:text-lg text-foreground-secondary leading-relaxed">
           {description}
         </p>
       )}
@@ -46,4 +46,3 @@ export function SectionHeader({
     </div>
   );
 }
-
