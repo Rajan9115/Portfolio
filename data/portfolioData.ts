@@ -103,10 +103,10 @@ export const skillCategories: SkillCategory[] = [
 export const experienceData: ExperienceItem[] = [
   {
     id: "exp-1",
-    role: "Full-Stack Software Engineer (Independent & Contract)",
-    organization: "Freelance & Product Engineering",
+    role: "Full-Stack Software Engineer",
+    organization: "Apna Softwares pvt ltd",
     location: "Remote / Hybrid",
-    period: "2024 – Present",
+    period: "2025 – Present",
     status: "Active",
     summary:
       "Designing and implementing production-grade full-stack systems, secure authentication pipelines, and transactional database architectures for real-world applications.",
@@ -238,4 +238,3 @@ export const toolkitData: ToolkitCategory[] = [
     ],
   },
 ];
-
