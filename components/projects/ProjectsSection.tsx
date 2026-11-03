@@ -27,30 +27,36 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 sm:py-28 bg-card border-b border-border transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
-          <SectionHeader
-            kicker="Featured Engineering"
-            title="Production systems & architectural case studies."
-            description="Explore real-world platforms built with strict type safety, relational integrity, dual-rail payments, and real-time sockets."
-            className="mb-0"
-          />
+        <div className="flex flex-col gap-5 sm:gap-6 mb-10 sm:mb-12 w-full min-w-0">
 
-          {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1.5 rounded-xl bg-background border border-border w-fit">
-            {CATEGORIES.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-all cursor-pointer ${
-                  activeCategory === category
-                    ? "bg-card text-accent shadow-xs font-semibold border border-border"
-                    : "text-foreground-secondary hover:text-foreground hover:bg-background-secondary"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+          {/* Row 1: Section Header */}
+          <div className="w-full min-w-0">
+            <SectionHeader
+              kicker="Featured Engineering"
+              title="Production systems & architectural case studies."
+              description="Explore real-world platforms built with strict type safety, relational integrity, dual-rail payments, and real-time sockets."
+              className="mb-0"
+            />
           </div>
+
+          {/* Row 2: Category Filter Tabs */}
+          <div className="w-full min-w-0 overflow-hidden">
+            <div className="flex items-center gap-1.5 p-1.5 rounded-xl bg-background border border-border w-full sm:w-fit max-w-full overflow-x-auto scrollbar-hide">
+              {CATEGORIES.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`shrink-0 px-3 sm:px-3.5 py-2 text-xs sm:text-sm font-medium rounded-lg whitespace-nowrap transition-all cursor-pointer ${activeCategory === category
+                      ? "bg-card text-accent shadow-xs font-semibold border border-border"
+                      : "text-foreground-secondary hover:text-foreground hover:bg-background-secondary"
+                    }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+
         </div>
 
         {/* Projects Grid */}
