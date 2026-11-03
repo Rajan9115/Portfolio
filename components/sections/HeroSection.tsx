@@ -194,6 +194,7 @@ export function HeroSection() {
                       </span>
                     </div>
                     <div className="flex flex-wrap gap-1.5">
+                      <Badge variant="subtle" fontMono>System Design</Badge>
                       <Badge variant="subtle" fontMono>Next.js 16</Badge>
                       <Badge variant="subtle" fontMono>TypeScript</Badge>
                       <Badge variant="subtle" fontMono>Node.js</Badge>
